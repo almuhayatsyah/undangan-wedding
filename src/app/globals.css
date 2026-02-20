@@ -1,26 +1,546 @@
 @import "tailwindcss";
 
+/* =============================================
+   BROWN & GOLD WEDDING THEME
+   ============================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Colors - Coklat (matching baju mempelai) */
+  --sage: #8b6f5e;
+  --sage-light: #a68b7b;
+  --sage-dark: #6b5043;
+  --sage-muted: #d4c4ba;
+
+  /* Accent Colors - Gold/Bronze */
+  --gold: #c9a96e;
+  --gold-light: #dabe8a;
+  --gold-dark: #b08e4a;
+  --gold-muted: #e8dcc8;
+
+  /* Neutrals */
+  --cream: #faf5ef;
+  --cream-dark: #f0e6da;
+  --charcoal: #3a2a20;
+  --charcoal-light: #5a4a3f;
+  --warm-gray: #9e8e80;
+  --warm-gray-light: #c4b5a6;
+
+  /* Semantic */
+  --background: var(--cream);
+  --foreground: var(--charcoal);
+  --text-muted: var(--warm-gray);
+  --border: var(--warm-gray-light);
+
+  /* Fonts */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+
+  /* Spacing */
+  --section-padding: 5rem 1.5rem;
+  --section-padding-mobile: 3.5rem 1.25rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-sage-dark: var(--sage-dark);
+  --color-sage-muted: var(--sage-muted);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-muted: var(--gold-muted);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
+  --color-warm-gray: var(--warm-gray);
+  --color-warm-gray-light: var(--warm-gray-light);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =============================================
+   BASE STYLES
+   ============================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar but keep scroll */
+body.cover-open {
+  overflow: hidden;
+}
+
+/* =============================================
+   TYPOGRAPHY
+   ============================================= */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--charcoal);
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.75rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: var(--charcoal-light);
+}
+
+/* =============================================
+   SECTION STYLES
+   ============================================= */
+
+.section {
+  padding: var(--section-padding-mobile);
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: var(--section-padding);
+    max-width: 600px;
+  }
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--charcoal);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--warm-gray);
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* =============================================
+   DECORATIVE ELEMENTS
+   ============================================= */
+
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(
+    to var(--direction, right),
+    var(--gold),
+    transparent
+  );
+}
+
+.ornament-divider::before {
+  --direction: right;
+}
+
+.ornament-divider::after {
+  --direction: left;
+}
+
+.ornament-icon {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.floral-frame {
+  position: relative;
+}
+
+.floral-frame::before,
+.floral-frame::after {
+  content: "✿";
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--sage-light);
+  opacity: 0.4;
+}
+
+.floral-frame::before {
+  top: -10px;
+  left: -10px;
+  transform: rotate(-30deg);
+}
+
+.floral-frame::after {
+  bottom: -10px;
+  right: -10px;
+  transform: rotate(150deg);
+}
+
+/* Section Divider Leaf */
+.leaf-divider {
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--sage-light);
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+/* =============================================
+   GLASSMORPHISM CARD
+   ============================================= */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.04),
+    0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.glass-card-gold {
+  background: linear-gradient(
+    135deg,
+    rgba(201, 169, 110, 0.08),
+    rgba(255, 255, 255, 0.85)
+  );
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 24px rgba(201, 169, 110, 0.08),
+    0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* =============================================
+   BUTTON STYLES
+   ============================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(139, 159, 130, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 159, 130, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.4);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  background: transparent;
+  color: var(--sage-dark);
+  border: 1.5px solid var(--sage-light);
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--sage);
+  color: white;
+  border-color: var(--sage);
+}
+
+/* =============================================
+   FORM STYLES
+   ============================================= */
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1.5px solid var(--warm-gray-light);
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(139, 159, 130, 0.15);
+}
+
+.form-input::placeholder {
+  color: var(--warm-gray);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 0.4rem;
+}
+
+/* =============================================
+   FLOATING PETALS ANIMATION
+   ============================================= */
+
+@keyframes float-down {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(110vh) translateX(80px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+.petal {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  will-change: transform;
+}
+
+/* =============================================
+   PULSE ANIMATION
+   ============================================= */
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    box-shadow: 0 4px 15px rgba(139, 159, 130, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(139, 159, 130, 0.6);
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* =============================================
+   LIGHTBOX OVERLAY
+   ============================================= */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox-overlay img {
+  max-width: 92vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* =============================================
+   CUSTOM SCROLLBAR
+   ============================================= */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sage-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage);
+}
+
+/* =============================================
+   MUSIC TOGGLE
+   ============================================= */
+
+.music-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(139, 159, 130, 0.4);
+  transition: all 0.3s ease;
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+}
+
+.music-toggle.playing {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* Music bars animation */
+.music-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 16px;
+}
+
+.music-bar {
+  width: 3px;
+  background: white;
+  border-radius: 2px;
+  animation: music-bar-bounce 0.8s ease-in-out infinite alternate;
+}
+
+.music-bar:nth-child(1) {
+  height: 6px;
+  animation-delay: 0s;
+}
+.music-bar:nth-child(2) {
+  height: 12px;
+  animation-delay: 0.2s;
+}
+.music-bar:nth-child(3) {
+  height: 8px;
+  animation-delay: 0.4s;
+}
+.music-bar:nth-child(4) {
+  height: 14px;
+  animation-delay: 0.1s;
+}
+
+@keyframes music-bar-bounce {
+  0% {
+    transform: scaleY(0.3);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.music-bars.paused .music-bar {
+  animation-play-state: paused;
+  transform: scaleY(0.5);
 }
