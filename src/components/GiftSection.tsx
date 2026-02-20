@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { weddingConfig } from "@/lib/config";
 import { toast } from "sonner";
-import { FiCopy, FiGift } from "react-icons/fi";
+import { FiCopy } from "react-icons/fi";
 import {
   fadeUpInitial,
   fadeUpAnimate,
@@ -61,15 +61,22 @@ export default function GiftSection() {
             transition={fadeUpTransition(i * 0.15)}
             className="glass-card-gold p-5 text-center"
           >
-            {/* Icon */}
-            <div
-              className="w-10 h-10 rounded-full mx-auto mb-3 flex items-center justify-center"
-              style={{
-                background:
-                  "linear-gradient(135deg, var(--gold-light), var(--gold))",
-              }}
-            >
-              <FiGift className="text-white" size={18} />
+            {/* Bank Logo */}
+            <div className="flex justify-center mb-3">
+              <div
+                className="w-16 h-16 rounded-xl flex items-center justify-center overflow-hidden"
+                style={{
+                  background: "white",
+                  border: "1px solid var(--warm-gray-light)",
+                }}
+              >
+                <img
+                  src={gift.logo}
+                  alt={gift.bank}
+                  className="w-12 h-12"
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             </div>
 
             {/* Bank name */}

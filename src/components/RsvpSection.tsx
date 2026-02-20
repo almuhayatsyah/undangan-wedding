@@ -117,7 +117,7 @@ export default function RsvpSection({ onSubmitSuccess }: RsvpSectionProps) {
         viewport={viewportOnce}
         transition={fadeUpTransition(0.1)}
         onSubmit={handleSubmit}
-        className="glass-card p-6 space-y-4"
+        className="p-2 space-y-4"
       >
         {/* Nama */}
         <div>

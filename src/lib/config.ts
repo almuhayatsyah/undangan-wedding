@@ -106,14 +106,16 @@ export const weddingConfig = {
   // Gift / Amplop Digital
   gifts: [
     {
-      bank: "Bank Syariah Indonesia (BSI)",
+      bank: "Bank Aceh Syariah",
       accountNumber: "1234567890",
       accountName: "Amanda Shinta",
+      logo: "/images/bankaceh.png",
     },
     {
-      bank: "Bank Central Asia (BCA)",
+      bank: "Bank Syariah Indonesia (BSI)",
       accountNumber: "0987654321",
       accountName: "Herman",
+      logo: "/images/bsi.jpg",
     },
   ],
 
