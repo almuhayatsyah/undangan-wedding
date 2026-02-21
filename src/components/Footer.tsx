@@ -33,14 +33,16 @@ export default function Footer() {
 
         {/* Ornament */}
         <div className="flex items-center justify-center gap-3 my-4">
-          <span className="h-[1px] w-10 bg-gold/30" />
+          <span className="h-px w-10 bg-gold/30" />
           <FiHeart className="text-gold text-sm" />
-          <span className="h-[1px] w-10 bg-gold/30" />
+          <span className="h-px w-10 bg-gold/30" />
         </div>
 
         {/* Credit */}
         <p className="text-warm-gray/50 text-[0.65rem] mt-8">
-          Made with ❤️ — Undangan Digital
+          Made with❤️
+          <br />
+          by <a href="https://twopad.id">twopad.id</a>
         </p>
       </motion.div>
     </footer>
