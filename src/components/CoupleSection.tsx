@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { weddingConfig } from "@/lib/config";
-import { FaInstagram } from "react-icons/fa";
 import {
   fadeUpInitial,
   fadeUpAnimate,
@@ -63,14 +62,6 @@ function PersonCard({ person, delay, isGroom }: PersonCardProps) {
       <p className="text-charcoal-light text-sm font-medium">
         {person.motherName}
       </p>
-
-      {/* Instagram */}
-      {person.instagram && (
-        <div className="mt-3 flex items-center justify-center gap-1.5 text-sage">
-          <FaInstagram size={14} />
-          <span className="text-xs font-medium">{person.instagram}</span>
-        </div>
-      )}
     </motion.div>
   );
 }

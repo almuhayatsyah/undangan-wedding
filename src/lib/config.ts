@@ -8,20 +8,18 @@ export const weddingConfig = {
   bride: {
     fullName: "Amanda Shinta",
     nickname: "Amanda",
-    fatherName: "----",
-    motherName: "----",
-    childOrder: "Putri kedua dari",
+    fatherName: "Bapak Alm. Asril",
+    motherName: "Ibu Almh. Lasmi",
+    childOrder: "Putri keempat dari",
     photo: "/couple/bride.jpg",
-    instagram: "@amanda.shinta",
   },
   groom: {
     fullName: "Herman",
     nickname: "Herman",
-    fatherName: "----",
-    motherName: "----",
-    childOrder: "Putra pertama dari",
+    fatherName: "Bapak Khairi",
+    motherName: "Ibu Sayana",
+    childOrder: "Putra sulung dari",
     photo: "/couple/groom.jpg",
-    instagram: "@herman",
   },
 
   // Detail Acara Adat Aceh
