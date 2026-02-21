@@ -63,7 +63,7 @@ export default function CoverScreen({
             className="text-center px-6"
           >
             {/* Wedding label */}
-            <p className="text-white/70 text-xs tracking-[5px] uppercase mb-6 font-medium">
+            <p className="text-white/90 text-xs tracking-[5px] uppercase mb-6 font-medium">
               The Wedding Of
             </p>
 
@@ -93,7 +93,7 @@ export default function CoverScreen({
               {weddingConfig.groom.nickname}
             </h1>
             <p
-              className="text-white/80 text-2xl mb-1"
+              className="text-white text-2xl mb-1"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               &
@@ -107,14 +107,14 @@ export default function CoverScreen({
 
             {/* Ornament divider */}
             <div className="flex items-center justify-center gap-3 mb-8">
-              <span className="h-px w-12 bg-linear-to-r from-transparent to-white/40" />
-              <span className="text-white/50">✦</span>
-              <span className="h-px w-12 bg-linear-to-l from-transparent to-white/40" />
+              <span className="h-px w-12 bg-linear-to-r from-transparent to-white/70" />
+              <span className="text-white/80">✦</span>
+              <span className="h-px w-12 bg-linear-to-l from-transparent to-white/70" />
             </div>
 
             {/* Guest name */}
             <div className="mb-8">
-              <p className="text-white/60 text-xs tracking-[3px] uppercase mb-2">
+              <p className="text-white/90 text-xs tracking-[3px] uppercase mb-2">
                 Kepada Yth.
               </p>
               <p className="text-white text-lg font-medium">

@@ -32,8 +32,8 @@ export const weddingConfig = {
       time: "08:00",
       endTime: "10:00",
       timezone: "WIB",
-      venue: "Masjid Al-Ikhlas",
-      address: "Jl. Mawar No. 10, Banda Aceh",
+      venue: "KUA Kecamatan Susoh",
+      address: "Padang Baru, Susoh, Kabupaten Aceh Barat Daya, Aceh",
       mapsUrl: "https://maps.google.com/?q=-5.5483,95.3238",
       description: "Prosesi ijab kabul pernikahan",
     },
@@ -44,7 +44,7 @@ export const weddingConfig = {
       endTime: "12:00",
       timezone: "WIB",
       venue: "Kediaman Mempelai Wanita",
-      address: "Jl. Mawar No. 10, Banda Aceh",
+      address: "Jl. Cv Raja,Desa Rumah Panjang,kec Susoh kab Abdya.",
       mapsUrl: "https://maps.google.com/?q=-5.5483,95.3238",
       description: "Upacara mandi pengantin perempuan",
     },
@@ -107,18 +107,18 @@ export const weddingConfig = {
   gifts: [
     {
       bank: "Bank Aceh Syariah",
-      accountNumber: "1234567890",
+      accountNumber: "09502066201001",
       accountName: "Amanda Shinta",
       logo: "/images/bankaceh.png",
     },
     {
       bank: "Bank Syariah Indonesia (BSI)",
-      accountNumber: "0987654321",
+      accountNumber: "7139242674",
       accountName: "Herman",
       logo: "/images/bsi.jpg",
     },
   ],
 
   // Musik Background (taruh file di public/music/)
-  music: "/music/background.mp3",
+  music: "/music/wedding.mp3",
 };
