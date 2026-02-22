@@ -64,7 +64,7 @@ export const weddingConfig = {
       endTime: "17:00",
       timezone: "WIB",
       venue: "Kediaman Mempelai Wanita",
-      address: "Dusun Kuala Cangkul, Desa Ladang, kec susoh",
+      address: "Jl. Cv Raja,Desa Rumah Panjang,kec Susoh kab Abdya.",
       mapsUrl: "https://maps.google.com/?q=-5.5489,95.3175",
       description: "Pesta pernikahan & walimatul urs",
     },
