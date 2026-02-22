@@ -77,7 +77,7 @@ export default function CoverScreen({
                 }}
               >
                 <img
-                  src="/images/fotosection.webp"
+                  src="/images/pasanganku.jpg"
                   alt="Foto Mempelai"
                   className="w-full h-full"
                   style={{ objectFit: "cover" }}
@@ -114,10 +114,10 @@ export default function CoverScreen({
 
             {/* Guest name */}
             <div className="mb-8">
-              <p className="text-white/90 text-xs tracking-[3px] uppercase mb-2">
+              <p className="text-white/15 text-xs tracking-[3px] uppercase mb-2">
                 Kepada Yth.
               </p>
-              <p className="text-white text-lg font-medium">
+              <p className="text-white/20 text-lg font-medium">
                 {guestName || "Tamu Undangan"}
               </p>
             </div>

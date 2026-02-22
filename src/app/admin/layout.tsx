@@ -71,7 +71,7 @@ export default function AdminLayout({
           <p
             style={{ fontSize: "0.65rem", color: "#9E8E80", marginTop: "2px" }}
           >
-            Herman & Amanda Shinta
+            Herman & Shinta
           </p>
         </div>
         <button

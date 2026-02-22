@@ -3,11 +3,11 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Undangan Pernikahan - Herman & Amanda Shinta",
+  title: "Undangan Pernikahan - Herman & Shinta",
   description:
     "Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.",
   openGraph: {
-    title: "Undangan Pernikahan - Herman & Amanda Shinta",
+    title: "Undangan Pernikahan - Herman & Shinta",
     description:
       "Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.",
     type: "website",
