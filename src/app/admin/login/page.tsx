@@ -71,7 +71,7 @@ export default function AdminLoginPage() {
               marginBottom: "0.4rem",
             }}
           >
-            Admin Panel
+            Twopad wedding
           </h1>
           <p style={{ color: "#9E8E80", fontSize: "0.8rem" }}>
             Kelola undangan pernikahan Herman & Amanda

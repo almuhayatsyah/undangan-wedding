@@ -102,19 +102,6 @@ function EventCard({ event, delay }: EventCardProps) {
             </div>
           </div>
         </div>
-
-        {/* Maps button */}
-        <div style={{ textAlign: "center", marginTop: "1.25rem" }}>
-          <a
-            href={event.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline text-xs"
-          >
-            <FiNavigation size={14} />
-            Buka Maps
-          </a>
-        </div>
       </div>
     </motion.div>
   );
