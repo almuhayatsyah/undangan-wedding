@@ -7,10 +7,10 @@ export const weddingConfig = {
   // Nama Pasangan
   bride: {
     fullName: "Amanda Shinta",
-    nickname: "Amanda",
+    nickname: "Shinta",
     fatherName: "Bapak Alm. Asril",
     motherName: "Ibu Almh. Lasmi",
-    childOrder: "Putri keempat dari",
+    childOrder: "Putri Bungsu",
     photo: "/couple/bride.jpg",
   },
   groom: {
@@ -58,18 +58,18 @@ export const weddingConfig = {
       description: "Upacara mandi pengantin laki-laki",
     },
     {
-      title: "Resepsi",
+      title: "Resepsi H",
       date: "2026-04-08",
       time: "14:00",
       endTime: "17:00",
       timezone: "WIB",
-      venue: "Grand Ballroom Hotel Hermes",
+      venue: "Kediaman Mempelai Wanita",
       address: "Dusun Kuala Cangkul, Desa Ladang, kec susoh",
       mapsUrl: "https://maps.google.com/?q=-5.5489,95.3175",
       description: "Pesta pernikahan & walimatul urs",
     },
     {
-      title: "Ngunduh Mantu",
+      title: "Resepsi Linto Baro",
       date: "2026-04-09",
       time: "10:00",
       endTime: "14:00",
@@ -92,7 +92,7 @@ export const weddingConfig = {
 
   // Galeri Foto
   gallery: [
-    "/images/fotoberdua.webp",
+    "/images/pasanganku.jpg",
     "/images/fotoberdua2.webp",
     "/images/pria1.webp",
     "/images/wanita1.webp",
