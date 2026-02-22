@@ -5,12 +5,23 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Undangan Pernikahan - Herman & Shinta",
   description:
-    "Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.",
+    "Undangan pernikahan digital Herman & Shinta. Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.",
   openGraph: {
-    title: "Undangan Pernikahan - Herman & Shinta",
+    title: "💌 Undangan Pernikahan Herman & Shinta",
     description:
-      "Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.",
+      "Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami. Buka undangan untuk info lengkap.",
     type: "website",
+    url: "https://herman-shinta.twopad.id",
+    siteName: "Undangan Herman & Shinta",
+    images: [
+      {
+        url: "https://herman-shinta.twopad.id/images/pasanganku.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Herman & Shinta",
+      },
+    ],
+    locale: "id_ID",
   },
 };
 
