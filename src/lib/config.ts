@@ -60,7 +60,7 @@ export const weddingConfig = {
     {
       title: "Resepsi H",
       date: "2026-04-08",
-      time: "14:00",
+      time: "10:00",
       endTime: "17:00",
       timezone: "WIB",
       venue: "Kediaman Mempelai Wanita",
